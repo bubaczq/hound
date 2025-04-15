@@ -1,0 +1,869 @@
+[gd_scene load_steps=43 format=3 uid="uid://0vbumh4e7g63"]
+
+[ext_resource type="Script" path="res://scripts/loggin.gd" id="1_avf30"]
+[ext_resource type="VideoStream" path="res://assets/videos/menu/LOGOK.ogv" id="2_u4a1e"]
+[ext_resource type="StyleBox" uid="uid://bxj31ihmrukq3" path="res://tres/Exit_hover.tres" id="3_etndr"]
+[ext_resource type="StyleBox" uid="uid://ifv7a2gg7mr1" path="res://tres/Exit_pressed.tres" id="4_3hhkd"]
+[ext_resource type="StyleBox" uid="uid://nem0el7yj8j0" path="res://tres/Exit_normal.tres" id="5_0pjqu"]
+[ext_resource type="Texture2D" uid="uid://dqda3w71g4x0o" path="res://assets/pngs/arrow1.png" id="6_4xcxx"]
+[ext_resource type="PackedScene" uid="uid://cidd6brf6ymsp" path="res://scenes/MainMenu/save.tscn" id="6_wwjuy"]
+[ext_resource type="StyleBox" uid="uid://dr17sw424nyov" path="res://tres/loggin.tres" id="7_c1h5p"]
+[ext_resource type="FontFile" uid="uid://tepotnlrvae4" path="res://assets/fonts/Keania_One/KeaniaOne-Regular.ttf" id="8_rr0al"]
+[ext_resource type="StyleBox" uid="uid://dao6fa1bwbyw3" path="res://tres/BTN_hover.tres" id="9_poqlf"]
+[ext_resource type="StyleBox" uid="uid://bdj6m3l4g5p4s" path="res://tres/BTN_pressed.tres" id="10_qq7fm"]
+[ext_resource type="StyleBox" uid="uid://xu7fbl6tct46" path="res://tres/option_save.tres" id="14_ifgxl"]
+[ext_resource type="StyleBox" uid="uid://dgfmvmtk6u0dq" path="res://tres/web_btn_hover.tres" id="15_er30v"]
+[ext_resource type="Texture2D" uid="uid://o3bilkeqvul" path="res://assets/pngs/foldgomb.png" id="15_r63ji"]
+[ext_resource type="StyleBox" uid="uid://blwa25bniu06" path="res://tres/web_btn_pressed.tres" id="16_h3jq7"]
+[ext_resource type="StyleBox" uid="uid://b3icvsu1qbgef" path="res://tres/web_btn_normal.tres" id="17_x1lkn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3mli"]
+bg_color = Color(0.321569, 0.780392, 0.780392, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7d345"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jijnh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmbbb"]
+bg_color = Color(0.243209, 0.652213, 0.652477, 1)
+border_width_left = 35
+border_width_right = 35
+border_color = Color(0.243137, 0.65098, 0.65098, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mx3de"]
+bg_color = Color(0.321569, 0.780392, 0.780392, 1)
+border_width_top = 35
+border_width_bottom = 35
+border_color = Color(0.321569, 0.780392, 0.780392, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ygocp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bu207"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uvk37"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6b123"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eyqpr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4igia"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hx4jo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vrhwc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47dck"]
+bg_color = Color(0.321569, 0.780392, 0.780392, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kjgo5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_isqlm"]
+bg_color = Color(0.321569, 0.780392, 0.780392, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nyfe4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7xat"]
+bg_color = Color(0.321569, 0.780392, 0.780392, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 10
+border_width_bottom = 20
+border_color = Color(0.321569, 0.780392, 0.780392, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_slf6y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rs0qk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_njula"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bnd4y"]
+bg_color = Color(0.321569, 0.780392, 0.780392, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gug5o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_prwd5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dnlhb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6dh3b"]
+
+[node name="Loggin" type="Node2D"]
+script = ExtResource("1_avf30")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -27.0
+offset_top = -12.0
+offset_right = 493.0
+offset_bottom = 276.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+stream = ExtResource("2_u4a1e")
+autoplay = true
+
+[node name="pressanykey" type="Label" parent="UI/VideoStreamPlayer"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.222
+anchor_top = 0.438
+anchor_right = 0.773
+anchor_bottom = 0.767
+offset_left = 0.316559
+offset_top = 244.345
+offset_right = 5.38159
+offset_bottom = 244.284
+theme_override_font_sizes/font_size = 50
+text = "Press any key to continue..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Saves" type="MarginContainer" parent="UI/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.109
+anchor_top = 0.16
+anchor_right = 0.917
+anchor_bottom = 0.827
+offset_left = 221.4
+offset_top = -3.0
+offset_right = -359.8
+offset_bottom = -6.60004
+size_flags_vertical = 4
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="BackGround" type="Panel" parent="UI/Control/Saves"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_p3mli")
+
+[node name="Saves_Back" type="Button" parent="UI/Control/Saves/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.337
+anchor_top = 1.026
+anchor_right = -0.193
+anchor_bottom = 1.177
+offset_left = 86.35
+offset_top = -6.78003
+offset_right = 2207.15
+offset_bottom = 2113.19
+scale = Vector2(-0.042, 0.042)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7d345")
+theme_override_styles/hover = ExtResource("15_er30v")
+theme_override_styles/pressed = ExtResource("16_h3jq7")
+theme_override_styles/normal = ExtResource("17_x1lkn")
+icon = ExtResource("6_4xcxx")
+icon_alignment = 1
+
+[node name="Save" parent="UI/Control/Saves/BackGround" instance=ExtResource("6_wwjuy")]
+layout_mode = 1
+anchor_left = 0.423
+anchor_top = 0.137
+anchor_right = 0.778
+anchor_bottom = 0.333
+offset_left = -176.262
+offset_top = -0.598
+offset_right = 81.868
+offset_bottom = 0.218002
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Save2" parent="UI/Control/Saves/BackGround" instance=ExtResource("6_wwjuy")]
+layout_mode = 1
+anchor_left = 0.423
+anchor_top = 0.373
+anchor_right = 0.778
+anchor_bottom = 0.569
+offset_left = -175.262
+offset_top = 0.0579987
+offset_right = 82.868
+offset_bottom = 0.873993
+grow_horizontal = 1
+grow_vertical = 1
+SaveNumber = 2
+
+[node name="Save3" parent="UI/Control/Saves/BackGround" instance=ExtResource("6_wwjuy")]
+layout_mode = 1
+anchor_left = 0.423
+anchor_top = 0.609
+anchor_right = 0.778
+anchor_bottom = 0.805
+offset_left = -174.262
+offset_top = -0.286011
+offset_right = 82.868
+offset_bottom = 0.529968
+grow_horizontal = 1
+grow_vertical = 1
+SaveNumber = 3
+
+[node name="Lobby" type="MarginContainer" parent="UI/Control"]
+visible = false
+layout_mode = 2
+anchor_left = 0.415
+anchor_top = 0.5
+anchor_right = 0.581
+anchor_bottom = 0.749
+offset_left = -428.08
+offset_top = -390.0
+offset_right = 432.688
+offset_bottom = 228.648
+size_flags_vertical = 4
+theme_override_constants/margin_left = 310
+theme_override_constants/margin_top = 250
+theme_override_constants/margin_right = 310
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/Lobby"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Guest" type="Button" parent="UI/Control/Lobby/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jijnh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kmbbb")
+theme_override_styles/pressed = ExtResource("7_c1h5p")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mx3de")
+
+[node name="Text" type="Label" parent="UI/Control/Lobby/VBoxContainer/Guest"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -18.5
+offset_right = 93.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_fonts/font = ExtResource("8_rr0al")
+theme_override_font_sizes/font_size = 30
+text = "Belépés Vendégként"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Login" type="Button" parent="UI/Control/Lobby/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ygocp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kmbbb")
+theme_override_styles/pressed = ExtResource("7_c1h5p")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mx3de")
+
+[node name="Text" type="Label" parent="UI/Control/Lobby/VBoxContainer/Login"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -18.5
+offset_right = 93.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_fonts/font = ExtResource("8_rr0al")
+theme_override_font_sizes/font_size = 30
+text = "Bejelentkezés"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Registration" type="Button" parent="UI/Control/Lobby/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bu207")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kmbbb")
+theme_override_styles/pressed = ExtResource("7_c1h5p")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mx3de")
+
+[node name="Text" type="Label" parent="UI/Control/Lobby/VBoxContainer/Registration"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_fonts/font = ExtResource("8_rr0al")
+theme_override_font_sizes/font_size = 30
+text = "Regisztrálció"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="User" type="MarginContainer" parent="UI/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39
+anchor_top = 0.176
+anchor_right = 0.581
+anchor_bottom = 0.868
+offset_left = -449.28
+offset_top = -114.048
+offset_right = 482.688
+offset_bottom = 85.536
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 300
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/User"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Game" type="Button" parent="UI/Control/User/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uvk37")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kmbbb")
+theme_override_styles/pressed = ExtResource("7_c1h5p")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mx3de")
+
+[node name="Text" type="Label" parent="UI/Control/User/VBoxContainer/Game"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -18.5
+offset_right = 93.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_fonts/font = ExtResource("8_rr0al")
+theme_override_font_sizes/font_size = 30
+text = "JÁTÉK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Option" type="Button" parent="UI/Control/User/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6b123")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kmbbb")
+theme_override_styles/pressed = ExtResource("7_c1h5p")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mx3de")
+
+[node name="Text" type="Label" parent="UI/Control/User/VBoxContainer/Option"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_fonts/font = ExtResource("8_rr0al")
+theme_override_font_sizes/font_size = 30
+text = "BEÁLLÍTÁSOK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Achivments" type="Button" parent="UI/Control/User/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eyqpr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kmbbb")
+theme_override_styles/pressed = ExtResource("7_c1h5p")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mx3de")
+
+[node name="Text" type="Label" parent="UI/Control/User/VBoxContainer/Achivments"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_fonts/font = ExtResource("8_rr0al")
+theme_override_font_sizes/font_size = 30
+text = "ACHIVEMENTEK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit" type="Button" parent="UI/Control/User/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4igia")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kmbbb")
+theme_override_styles/pressed = ExtResource("7_c1h5p")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mx3de")
+
+[node name="Text" type="Label" parent="UI/Control/User/VBoxContainer/Exit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_fonts/font = ExtResource("8_rr0al")
+theme_override_font_sizes/font_size = 30
+text = "KILÉPÉS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Login" type="MarginContainer" parent="UI/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.411
+anchor_top = 0.5
+anchor_right = 0.577
+anchor_bottom = 0.792
+offset_left = -473.4
+offset_top = -159.0
+offset_right = 487.2
+offset_bottom = 134.4
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 50
+
+[node name="Panel" type="Panel" parent="UI/Control/Login"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hx4jo")
+
+[node name="BackLogin" type="Button" parent="UI/Control/Login/Panel"]
+layout_mode = 2
+anchor_left = -0.185
+anchor_top = 0.838
+anchor_right = -0.03
+anchor_bottom = 1.079
+offset_left = 91.705
+offset_top = 0.0739746
+offset_right = 2184.79
+offset_bottom = 2074.22
+scale = Vector2(-0.042, 0.042)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vrhwc")
+theme_override_styles/hover = ExtResource("9_poqlf")
+theme_override_styles/pressed = ExtResource("10_qq7fm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_47dck")
+icon = ExtResource("6_4xcxx")
+icon_alignment = 1
+
+[node name="Login_button" type="Button" parent="UI/Control/Login/Panel"]
+layout_mode = 2
+anchor_left = 1.022
+anchor_top = 0.838
+anchor_right = 1.175
+anchor_bottom = 1.08
+offset_left = -0.0460205
+offset_top = 0.0739746
+offset_right = 2076.23
+offset_bottom = 2075.84
+scale = Vector2(0.042, 0.042)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kjgo5")
+theme_override_styles/hover = ExtResource("9_poqlf")
+theme_override_styles/pressed = ExtResource("10_qq7fm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_isqlm")
+icon = ExtResource("6_4xcxx")
+icon_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/Login"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Errors" type="Label" parent="UI/Control/Login/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.815535, 0.0481745, 0.0270656, 1)
+theme_override_font_sizes/font_size = 20
+text = "1234142352356"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Email_text" type="LineEdit" parent="UI/Control/Login/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_placeholder_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_colors/font_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_fonts/font = ExtResource("8_rr0al")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nyfe4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r7xat")
+text = "teszt@teszt.hu"
+placeholder_text = "minta@mail.com"
+
+[node name="Password_text" type="LineEdit" parent="UI/Control/Login/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_placeholder_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_colors/font_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_fonts/font = ExtResource("8_rr0al")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_slf6y")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r7xat")
+text = "12345678"
+placeholder_text = "*********"
+
+[node name="Achivements" type="MarginContainer" parent="UI/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.457
+anchor_top = 0.237
+anchor_right = 0.548
+anchor_bottom = 1.0
+offset_left = -526.8
+offset_top = 94.4
+offset_right = 520.8
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 50
+
+[node name="GridContainer" type="GridContainer" parent="UI/Control/Achivements"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 8
+
+[node name="Panel" type="Panel" parent="UI/Control/Achivements/GridContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_rs0qk")
+
+[node name="Back" type="Button" parent="UI/Control/Achivements/GridContainer/Panel"]
+layout_mode = 2
+offset_left = 59.0
+offset_top = 265.0
+offset_right = 2307.0
+offset_bottom = 2513.0
+scale = Vector2(-0.042, 0.042)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_styles/focus = SubResource("StyleBoxEmpty_njula")
+theme_override_styles/hover = ExtResource("9_poqlf")
+theme_override_styles/pressed = ExtResource("10_qq7fm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_47dck")
+icon = ExtResource("6_4xcxx")
+icon_alignment = 1
+
+[node name="Message" type="Label" parent="UI/Control/Achivements"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.898275, 2.59906e-06, 1.2514e-06, 1)
+theme_override_font_sizes/font_size = 40
+text = "Be kell jelentkezz az achivmentekhez!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Options" type="MarginContainer" parent="UI/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39
+anchor_top = 0.176
+anchor_right = 0.581
+anchor_bottom = 0.868
+offset_left = -449.28
+offset_top = -114.048
+offset_right = 482.688
+offset_bottom = 85.536
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 50
+
+[node name="Panel" type="Panel" parent="UI/Control/Options"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bnd4y")
+
+[node name="Volume" type="HSlider" parent="UI/Control/Options/Panel"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 54.28
+offset_top = 40.248
+offset_right = -59.72
+offset_bottom = -579.752
+min_value = -80.0
+max_value = 0.0
+
+[node name="Text" type="Label" parent="UI/Control/Options/Panel/Volume"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.004
+anchor_top = -0.697
+anchor_right = 0.091
+offset_left = 0.26
+offset_top = 0.00100136
+offset_right = -0.335003
+text = "Volume"
+
+[node name="Sync" type="CheckBox" parent="UI/Control/Options/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 79.28
+offset_top = 91.248
+offset_right = -695.72
+offset_bottom = -528.752
+grow_horizontal = 2
+grow_vertical = 2
+button_pressed = true
+
+[node name="Text" type="Label" parent="UI/Control/Options/Panel/Sync"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.004
+anchor_top = -0.697
+anchor_right = 0.091
+offset_left = -13.816
+offset_top = 2.24899
+offset_right = 35.096
+offset_bottom = 2.24799
+text = "V-Sync"
+
+[node name="FullScreen" type="CheckBox" parent="UI/Control/Options/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 171.28
+offset_top = 93.248
+offset_right = -603.72
+offset_bottom = -526.752
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Text" type="Label" parent="UI/Control/Options/Panel/FullScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.422
+anchor_top = -0.667
+anchor_right = 1.356
+offset_left = -17.592
+offset_top = -0.741013
+offset_right = 19.736
+offset_bottom = 0.247986
+text = "FullScreen"
+
+[node name="Back_option" type="Button" parent="UI/Control/Options/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.126
+anchor_top = 0.896
+anchor_right = -0.01
+anchor_bottom = 1.038
+offset_left = 92.954
+offset_top = 0.159973
+offset_right = 2208.27
+offset_bottom = 2115.43
+scale = Vector2(-0.042, 0.042)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gug5o")
+theme_override_styles/hover = ExtResource("15_er30v")
+theme_override_styles/pressed = ExtResource("16_h3jq7")
+theme_override_styles/normal = ExtResource("17_x1lkn")
+icon = ExtResource("6_4xcxx")
+icon_alignment = 1
+
+[node name="Save_option" type="Button" parent="UI/Control/Options/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.765
+anchor_top = 0.798
+anchor_right = 0.959
+anchor_bottom = 0.956
+offset_left = -0.235046
+offset_top = -0.0939941
+offset_right = -0.241028
+offset_bottom = -0.268005
+theme_override_colors/font_color = Color(0, 0, 0, 0.584314)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_prwd5")
+theme_override_styles/normal = ExtResource("14_ifgxl")
+text = "Save
+"
+
+[node name="Stats" type="Label" parent="UI/Control/Options/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.052
+anchor_top = 0.21
+anchor_right = 0.267
+anchor_bottom = 0.32
+offset_left = -0.268002
+offset_top = 0.117981
+offset_right = -0.0530243
+offset_bottom = 0.287964
+theme_override_font_sizes/font_size = 50
+text = "Stats:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KilledEntity" type="Label" parent="UI/Control/Options/Panel/Stats"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.128
+anchor_top = 1.069
+anchor_right = 1.314
+anchor_bottom = 1.653
+offset_left = -0.0160007
+offset_top = 0.0319977
+offset_right = 0.992004
+offset_bottom = -0.0160065
+theme_override_font_sizes/font_size = 30
+text = "Killed Entity: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DieCounts" type="Label" parent="UI/Control/Options/Panel/Stats"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.087
+anchor_top = 1.806
+anchor_right = 1.279
+anchor_bottom = 2.389
+offset_left = 0.0359993
+offset_top = -0.0320129
+offset_right = 0.0119934
+offset_bottom = -0.00801086
+theme_override_font_sizes/font_size = 30
+text = "Die Counts: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close" type="Button" parent="UI/Control"]
+layout_mode = 2
+anchor_left = 0.924
+anchor_top = 0.029
+anchor_right = 0.978
+anchor_bottom = 0.122
+offset_left = -0.599976
+offset_top = -0.200001
+offset_right = -0.200073
+offset_bottom = 0.399994
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dnlhb")
+theme_override_styles/hover = ExtResource("3_etndr")
+theme_override_styles/pressed = ExtResource("4_3hhkd")
+theme_override_styles/normal = ExtResource("5_0pjqu")
+
+[node name="Text" type="Label" parent="UI/Control/Close"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Web" type="Button" parent="UI/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.789
+anchor_top = 0.824
+anchor_right = 0.851
+anchor_bottom = 0.932
+offset_left = 0.399902
+offset_top = -0.200073
+offset_right = 9.6001
+offset_bottom = 9.39996
+scale = Vector2(0.9, 0.9)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6dh3b")
+theme_override_styles/hover = ExtResource("15_er30v")
+theme_override_styles/pressed = ExtResource("16_h3jq7")
+theme_override_styles/normal = ExtResource("17_x1lkn")
+icon = ExtResource("15_r63ji")
+icon_alignment = 1
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 9.5
+one_shot = true
+
+[connection signal="finished" from="UI/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="UI/Control/Saves/BackGround/Saves_Back" to="." method="_on_saves_back_pressed"]
+[connection signal="pressed" from="UI/Control/Lobby/VBoxContainer/Guest" to="." method="_on_guest_pressed"]
+[connection signal="pressed" from="UI/Control/Lobby/VBoxContainer/Login" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="UI/Control/Lobby/VBoxContainer/Registration" to="." method="_on_registration_pressed"]
+[connection signal="pressed" from="UI/Control/User/VBoxContainer/Game" to="." method="_on_game_pressed"]
+[connection signal="pressed" from="UI/Control/User/VBoxContainer/Option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="UI/Control/User/VBoxContainer/Achivments" to="." method="_on_achivments_pressed"]
+[connection signal="pressed" from="UI/Control/User/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="UI/Control/Login/Panel/BackLogin" to="." method="_on_back_login_pressed"]
+[connection signal="pressed" from="UI/Control/Login/Panel/Login_button" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="UI/Control/Achivements/GridContainer/Panel/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="UI/Control/Options/Panel/Back_option" to="." method="_on_back_option_pressed"]
+[connection signal="pressed" from="UI/Control/Options/Panel/Save_option" to="." method="_on_save_option_pressed"]
+[connection signal="pressed" from="UI/Control/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="UI/Control/Web" to="." method="_on_web_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

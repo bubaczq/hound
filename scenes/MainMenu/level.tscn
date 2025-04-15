@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://wm7jpofgtf8l"]
+
+[ext_resource type="StyleBox" uid="uid://dpkgmfkur11op" path="res://tres/level_btn_hover.tres" id="1_5f2mn"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_knt27"]
+[ext_resource type="StyleBox" uid="uid://cr1wanxs7dia" path="res://tres/level_btn_pressed.tres" id="2_ilbba"]
+[ext_resource type="StyleBox" uid="uid://imxf0jqb2jfb" path="res://tres/level_btn_normal.tres" id="3_lt6rf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_re42k"]
+bg_color = Color(0.345098, 0.345098, 0.345098, 0.588235)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[node name="Level" type="Button"]
+offset_right = 75.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/disabled = SubResource("StyleBoxFlat_re42k")
+theme_override_styles/hover = ExtResource("1_5f2mn")
+theme_override_styles/pressed = ExtResource("2_ilbba")
+theme_override_styles/normal = ExtResource("3_lt6rf")
+script = ExtResource("1_knt27")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

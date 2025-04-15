@@ -1,0 +1,187 @@
+[gd_scene load_steps=38 format=3 uid="uid://dmw33ruhkehgo"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_8fay7"]
+[ext_resource type="Texture2D" uid="uid://bog4agtph50fc" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00000.png" id="2_3fqgd"]
+[ext_resource type="Texture2D" uid="uid://pr6sxudsw2xy" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00001.png" id="3_0inuk"]
+[ext_resource type="Texture2D" uid="uid://bwkj0f2abyqtc" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00002.png" id="4_2d5sn"]
+[ext_resource type="Texture2D" uid="uid://cd5f1l6cdakew" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00003.png" id="5_nnh5a"]
+[ext_resource type="Texture2D" uid="uid://cxngcwuei0jn7" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00004.png" id="6_ksu33"]
+[ext_resource type="Texture2D" uid="uid://b5u21d3tgybj6" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00005.png" id="7_4faxp"]
+[ext_resource type="Texture2D" uid="uid://dbbfkjqllw54n" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00006.png" id="8_flmop"]
+[ext_resource type="Texture2D" uid="uid://bu3qjuwbj6tw5" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00007.png" id="9_1wxi8"]
+[ext_resource type="Texture2D" uid="uid://bdxx4kdeeoldb" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00008.png" id="10_ognly"]
+[ext_resource type="Texture2D" uid="uid://ch5vqva8y5mjd" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00009.png" id="11_bovvo"]
+[ext_resource type="Texture2D" uid="uid://cotuqcgxfpu50" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00010.png" id="12_6cbh0"]
+[ext_resource type="Texture2D" uid="uid://bosjiixnulkxe" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00011.png" id="13_jxt3h"]
+[ext_resource type="Texture2D" uid="uid://b6005xsf76xlh" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00012.png" id="14_3xk4q"]
+[ext_resource type="Texture2D" uid="uid://btk6cse321ml1" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00013.png" id="15_k62sp"]
+[ext_resource type="Texture2D" uid="uid://yigm7um6lgd2" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00014.png" id="16_k4tc1"]
+[ext_resource type="Texture2D" uid="uid://d3fmlikgcgg2y" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00015.png" id="17_uw2vm"]
+[ext_resource type="Texture2D" uid="uid://b8yewmro31tg1" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00016.png" id="18_oemq3"]
+[ext_resource type="Texture2D" uid="uid://c8lipshbuxppx" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00017.png" id="19_68m70"]
+[ext_resource type="Texture2D" uid="uid://bjw0g5qpnj7ju" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00018.png" id="20_pp56s"]
+[ext_resource type="Texture2D" uid="uid://xq668y6n74cf" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00019.png" id="21_ckvc2"]
+[ext_resource type="Texture2D" uid="uid://co44bufpjcc75" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00020.png" id="22_jg2em"]
+[ext_resource type="Texture2D" uid="uid://bmg02bdlw6iln" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00021.png" id="23_n40j6"]
+[ext_resource type="Texture2D" uid="uid://c2hihyx4hgss3" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00022.png" id="24_1duvo"]
+[ext_resource type="Texture2D" uid="uid://dp8tyy2tpmuey" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00023.png" id="25_hymdv"]
+[ext_resource type="Texture2D" uid="uid://x3stdf65yccg" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00024.png" id="26_7x10t"]
+[ext_resource type="Texture2D" uid="uid://cooj1cq57y5cx" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00025.png" id="27_f3gnr"]
+[ext_resource type="Texture2D" uid="uid://c46wwlujulpyj" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00026.png" id="28_qwgo5"]
+[ext_resource type="Texture2D" uid="uid://be4wl7bc474oa" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00027.png" id="29_am03s"]
+[ext_resource type="Texture2D" uid="uid://ddn61bydxes5y" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00028.png" id="30_s85uw"]
+[ext_resource type="Texture2D" uid="uid://y4amhogdfrlj" path="res://assets/mossycavern/Slimes/SlimeOrange/SlimeOrange_00029.png" id="31_5crdt"]
+[ext_resource type="PackedScene" uid="uid://bf1jggjhmwfmg" path="res://scenes/Other/hit_box.tscn" id="32_abedi"]
+[ext_resource type="PackedScene" uid="uid://bqg8uhdyv5j1x" path="res://scenes/Other/hurt_box.tscn" id="33_qigaf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lqmfb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3fqgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0inuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2d5sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nnh5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ksu33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4faxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_flmop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1wxi8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ognly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bovvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6cbh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jxt3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3xk4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_k62sp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_k4tc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_uw2vm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_oemq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_68m70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_pp56s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ckvc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jg2em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_n40j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1duvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_hymdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_7x10t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_f3gnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_qwgo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_am03s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_s85uw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_5crdt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h6ccw"]
+radius = 119.151
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1dyc"]
+size = Vector2(409, 260)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6cxo"]
+size = Vector2(366, 243)
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_8fay7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lqmfb")
+autoplay = "default"
+frame_progress = 0.0746248
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h6ccw")
+
+[node name="WallChecker" type="RayCast2D" parent="."]
+target_position = Vector2(-300, 0)
+
+[node name="GroundChecker" type="RayCast2D" parent="."]
+target_position = Vector2(-475, 370)
+
+[node name="HitBox" parent="." instance=ExtResource("32_abedi")]
+collision_layer = 4
+collision_mask = 2
+damage = 16
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(9.5, -11)
+shape = SubResource("RectangleShape2D_g1dyc")
+
+[node name="HurtBox" parent="." instance=ExtResource("33_qigaf")]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+position = Vector2(7, -4.5)
+shape = SubResource("RectangleShape2D_t6cxo")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+
+[editable path="HitBox"]
+[editable path="HurtBox"]

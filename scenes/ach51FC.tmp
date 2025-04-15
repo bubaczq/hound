@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq724411xypom"]
+
+[ext_resource type="Script" path="res://achivement.gd" id="1_ukxnk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p088g"]
+bg_color = Color(2.98411e-06, 0.728521, 0.133936, 1)
+
+[node name="Achivement" type="Panel"]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p088g")
+script = ExtResource("1_ukxnk")
+
+[node name="Text" type="Label" parent="."]
+z_index = 10
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

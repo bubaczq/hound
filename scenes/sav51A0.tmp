@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://cidd6brf6ymsp"]
+
+[ext_resource type="Script" path="res://scenes/save.gd" id="1_ajjwy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhhcx"]
+bg_color = Color(3.36915e-06, 0.725501, 0.198854, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y284y"]
+
+[node name="Save" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 301.0
+offset_top = 198.0
+offset_right = -602.0
+offset_bottom = -466.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ajjwy")
+
+[node name="Have" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Delete" type="Button" parent="Have"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.891
+anchor_top = 0.618
+anchor_right = 1.0
+anchor_bottom = 0.963
+offset_left = 0.172974
+offset_top = -0.0480042
+offset_bottom = 0.0319977
+grow_horizontal = 2
+grow_vertical = 2
+text = "Törlés"
+
+[node name="Start" type="Button" parent="Have"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.153
+anchor_right = 0.598
+anchor_bottom = 0.993
+offset_left = -0.041008
+offset_top = -1.0
+offset_right = -0.206024
+offset_bottom = -0.0480042
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_xhhcx")
+text = "Start"
+
+[node name="Empty" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="New_Game" type="Button" parent="Empty"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_y284y")
+text = "Create New Game"
+
+[connection signal="pressed" from="Have/Delete" to="." method="_on_delete_pressed"]
+[connection signal="pressed" from="Have/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Empty/New_Game" to="." method="_on_new_game_pressed"]

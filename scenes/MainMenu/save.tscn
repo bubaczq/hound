@@ -1,0 +1,131 @@
+[gd_scene load_steps=13 format=3 uid="uid://cidd6brf6ymsp"]
+
+[ext_resource type="Script" path="res://scripts/save.gd" id="1_ajjwy"]
+[ext_resource type="StyleBox" uid="uid://bxj31ihmrukq3" path="res://tres/Exit_hover.tres" id="2_ui127"]
+[ext_resource type="StyleBox" uid="uid://ifv7a2gg7mr1" path="res://tres/Exit_pressed.tres" id="3_ti4or"]
+[ext_resource type="StyleBox" uid="uid://nem0el7yj8j0" path="res://tres/Exit_normal.tres" id="4_cxfbd"]
+[ext_resource type="StyleBox" uid="uid://csiivqpue84i0" path="res://tres/newgame_btn_hover.tres" id="5_d6c11"]
+[ext_resource type="StyleBox" uid="uid://dn5ffufhmbcwv" path="res://tres/newgame_btn_pressed.tres" id="6_uc560"]
+[ext_resource type="StyleBox" uid="uid://08jbm53kvcy5" path="res://tres/newgame_btn_normal.tres" id="7_ca3ji"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mdxar"]
+bg_color = Color(0.105882, 0.258824, 0.258824, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qkaqw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ydeg8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhhcx"]
+bg_color = Color(0, 0.72549, 0.2, 0.152941)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hlg0j"]
+
+[node name="Save" type="Panel"]
+anchors_preset = -1
+anchor_left = 0.215
+anchor_top = 0.247
+anchor_right = 0.57
+anchor_bottom = 0.417
+offset_top = 0.399994
+offset_right = -6.10352e-05
+offset_bottom = 0.399994
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mdxar")
+script = ExtResource("1_ajjwy")
+
+[node name="Have" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Delete" type="Button" parent="Have"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.847
+anchor_top = 0.618
+anchor_right = 0.96
+anchor_bottom = 0.963
+offset_left = -7.95895
+offset_top = -0.0480042
+offset_right = -0.119934
+offset_bottom = 0.0319824
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qkaqw")
+theme_override_styles/hover = ExtResource("2_ui127")
+theme_override_styles/pressed = ExtResource("3_ti4or")
+theme_override_styles/normal = ExtResource("4_cxfbd")
+text = "Törlés"
+
+[node name="Start" type="Button" parent="Have"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.153
+anchor_top = 0.287
+anchor_right = 0.5
+anchor_bottom = 0.809
+offset_left = 0.959
+offset_top = -17.032
+offset_right = 2.50003
+offset_bottom = -0.0240173
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ydeg8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xhhcx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xhhcx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xhhcx")
+text = "Start"
+
+[node name="SaveName" type="Label" parent="Have"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.614
+anchor_top = 0.022
+anchor_right = 0.815
+anchor_bottom = 0.993
+offset_left = -0.157959
+offset_top = 0.00799942
+offset_right = -0.0549622
+offset_bottom = -0.0480194
+theme_override_font_sizes/font_size = 60
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Empty" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="New_Game" type="Button" parent="Empty"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hlg0j")
+theme_override_styles/hover = ExtResource("5_d6c11")
+theme_override_styles/pressed = ExtResource("6_uc560")
+theme_override_styles/normal = ExtResource("7_ca3ji")
+text = "Create New Game"
+
+[connection signal="pressed" from="Have/Delete" to="." method="_on_delete_pressed"]
+[connection signal="pressed" from="Have/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Empty/New_Game" to="." method="_on_new_game_pressed"]

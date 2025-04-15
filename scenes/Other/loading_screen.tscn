@@ -1,0 +1,129 @@
+[gd_scene load_steps=31 format=3 uid="uid://cennv8cygotob"]
+
+[ext_resource type="Script" path="res://scripts/loading_screen.gd" id="1_oatet"]
+[ext_resource type="VideoStream" path="res://assets/videos/Loading_screen.ogv" id="2_i5hus"]
+[ext_resource type="Texture2D" uid="uid://cxycl2oxbt8wp" path="res://assets/pngs/loading/frame_01_delay-0.08s.png" id="3_b4pno"]
+[ext_resource type="Texture2D" uid="uid://80d71r1nxcmq" path="res://assets/pngs/loading/frame_02_delay-0.08s.png" id="4_pqygk"]
+[ext_resource type="Texture2D" uid="uid://v60i2tbke7nd" path="res://assets/pngs/loading/frame_11_delay-0.08s.png" id="5_f8wqa"]
+[ext_resource type="Texture2D" uid="uid://dgmckvknssm0o" path="res://assets/pngs/loading/frame_12_delay-0.08s.png" id="6_3517y"]
+[ext_resource type="Texture2D" uid="uid://cidvaa3qro611" path="res://assets/pngs/loading/frame_13_delay-0.08s.png" id="7_3yw6l"]
+[ext_resource type="Texture2D" uid="uid://d2d0j53yl34b8" path="res://assets/pngs/loading/frame_14_delay-0.08s.png" id="8_xn62h"]
+[ext_resource type="Texture2D" uid="uid://bcw47sucny6s5" path="res://assets/pngs/loading/frame_15_delay-0.08s.png" id="9_vfhao"]
+[ext_resource type="Texture2D" uid="uid://bii43b3u84xpm" path="res://assets/pngs/loading/frame_16_delay-0.08s.png" id="10_wrqf6"]
+[ext_resource type="Texture2D" uid="uid://qijcnqe7e5vk" path="res://assets/pngs/loading/frame_17_delay-0.08s.png" id="11_cs6jd"]
+[ext_resource type="Texture2D" uid="uid://cws2k547f5nwp" path="res://assets/pngs/loading/frame_18_delay-0.08s.png" id="12_hig4w"]
+[ext_resource type="Texture2D" uid="uid://dwvor642mpsa5" path="res://assets/pngs/loading/frame_19_delay-0.08s.png" id="13_tgoq2"]
+[ext_resource type="Texture2D" uid="uid://yrlfs46e8r7k" path="res://assets/pngs/loading/frame_20_delay-0.08s.png" id="14_ammfi"]
+[ext_resource type="Texture2D" uid="uid://breyb885ce1wd" path="res://assets/pngs/loading/frame_03_delay-0.08s.png" id="15_amj5o"]
+[ext_resource type="Texture2D" uid="uid://drf3mwib8q40x" path="res://assets/pngs/loading/frame_21_delay-0.08s.png" id="16_flqir"]
+[ext_resource type="Texture2D" uid="uid://dqdg37qk07ya5" path="res://assets/pngs/loading/frame_22_delay-0.08s.png" id="17_4a353"]
+[ext_resource type="Texture2D" uid="uid://ckndbrtoy280x" path="res://assets/pngs/loading/frame_23_delay-0.08s.png" id="18_2an21"]
+[ext_resource type="Texture2D" uid="uid://dr8de52x2u2io" path="res://assets/pngs/loading/frame_24_delay-0.08s.png" id="19_dcmgs"]
+[ext_resource type="Texture2D" uid="uid://mlhsskdoaa2r" path="res://assets/pngs/loading/frame_25_delay-0.08s.png" id="20_sib04"]
+[ext_resource type="Texture2D" uid="uid://pn0jefyfr51o" path="res://assets/pngs/loading/frame_26_delay-0.08s.png" id="21_gcrgi"]
+[ext_resource type="Texture2D" uid="uid://cq2037bjrytam" path="res://assets/pngs/loading/frame_04_delay-0.08s.png" id="22_jgpq3"]
+[ext_resource type="Texture2D" uid="uid://d3ah3s40kb0sa" path="res://assets/pngs/loading/frame_05_delay-0.08s.png" id="23_fi6lx"]
+[ext_resource type="Texture2D" uid="uid://cwd8wdy6il4au" path="res://assets/pngs/loading/frame_06_delay-0.08s.png" id="24_aj7ts"]
+[ext_resource type="Texture2D" uid="uid://k5y7g4ssjhb" path="res://assets/pngs/loading/frame_07_delay-0.08s.png" id="25_5ovnd"]
+[ext_resource type="Texture2D" uid="uid://c5pwa4atq84iy" path="res://assets/pngs/loading/frame_08_delay-0.08s.png" id="26_nbhhp"]
+[ext_resource type="Texture2D" uid="uid://c3ubqagwlumn1" path="res://assets/pngs/loading/frame_09_delay-0.08s.png" id="27_ytf60"]
+[ext_resource type="Texture2D" uid="uid://bv7ixtuh13a58" path="res://assets/pngs/loading/frame_10_delay-0.08s.png" id="28_3t8br"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpp5n"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_6r4ws"]
+frames = 27
+frame_0/texture = ExtResource("3_b4pno")
+frame_0/duration = 0.1
+frame_1/texture = ExtResource("4_pqygk")
+frame_1/duration = 0.1
+frame_2/texture = ExtResource("15_amj5o")
+frame_2/duration = 0.1
+frame_3/texture = ExtResource("22_jgpq3")
+frame_3/duration = 0.1
+frame_4/texture = ExtResource("23_fi6lx")
+frame_4/duration = 0.1
+frame_5/texture = ExtResource("24_aj7ts")
+frame_5/duration = 0.1
+frame_6/texture = ExtResource("25_5ovnd")
+frame_6/duration = 0.1
+frame_7/texture = ExtResource("26_nbhhp")
+frame_7/duration = 0.1
+frame_8/texture = ExtResource("27_ytf60")
+frame_8/duration = 0.1
+frame_9/texture = ExtResource("28_3t8br")
+frame_9/duration = 0.1
+frame_10/texture = ExtResource("5_f8wqa")
+frame_10/duration = 0.1
+frame_11/texture = ExtResource("6_3517y")
+frame_11/duration = 0.1
+frame_12/texture = ExtResource("7_3yw6l")
+frame_12/duration = 0.1
+frame_13/texture = ExtResource("8_xn62h")
+frame_13/duration = 0.1
+frame_14/texture = ExtResource("9_vfhao")
+frame_14/duration = 0.1
+frame_15/texture = ExtResource("10_wrqf6")
+frame_15/duration = 0.1
+frame_16/texture = ExtResource("11_cs6jd")
+frame_16/duration = 0.1
+frame_17/texture = ExtResource("12_hig4w")
+frame_17/duration = 0.1
+frame_18/texture = ExtResource("13_tgoq2")
+frame_18/duration = 0.1
+frame_19/texture = ExtResource("14_ammfi")
+frame_19/duration = 0.1
+frame_20/texture = ExtResource("16_flqir")
+frame_20/duration = 0.1
+frame_21/texture = ExtResource("17_4a353")
+frame_21/duration = 0.1
+frame_22/texture = ExtResource("18_2an21")
+frame_22/duration = 0.1
+frame_23/texture = ExtResource("19_dcmgs")
+frame_23/duration = 0.1
+frame_24/texture = ExtResource("20_sib04")
+frame_24/duration = 0.1
+frame_25/texture = ExtResource("21_gcrgi")
+frame_25/duration = 0.1
+frame_26/texture = ExtResource("21_gcrgi")
+frame_26/duration = 0.1
+
+[node name="LoadingScreen" type="CanvasLayer"]
+script = ExtResource("1_oatet")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lpp5n")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+anchors_preset = -1
+anchor_left = 0.067
+anchor_right = 0.943
+anchor_bottom = 1.0
+offset_left = 0.199997
+offset_right = -0.200073
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_i5hus")
+autoplay = true
+expand = true
+loop = true
+
+[node name="TextureRect" type="TextureRect" parent="VideoStreamPlayer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.821
+anchor_top = 0.722
+anchor_right = 0.93
+anchor_bottom = 0.914
+offset_left = -0.400024
+offset_top = 0.399963
+offset_right = 359.0
+offset_bottom = 358.8
+scale = Vector2(0.3, 0.3)
+texture = SubResource("AnimatedTexture_6r4ws")

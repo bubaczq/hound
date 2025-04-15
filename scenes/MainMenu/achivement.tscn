@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://bq724411xypom"]
+
+[ext_resource type="StyleBox" uid="uid://botc66v3e1wls" path="res://tres/achivement_ok.tres" id="1_fybnh"]
+[ext_resource type="Script" path="res://scripts/achivement.gd" id="2_0r786"]
+[ext_resource type="Texture2D" uid="uid://bskaa7jl41foo" path="res://assets/achivements/inactive/ellenfel_inaktiv.png" id="3_spr80"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67cb6"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 0.498039)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.647393, 0.554561, 0, 1)
+border_blend = true
+corner_radius_top_right = 40
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 40
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[node name="Achivement" type="Panel"]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = ExtResource("1_fybnh")
+script = ExtResource("2_0r786")
+
+[node name="Text" type="Label" parent="."]
+z_index = 10
+layout_mode = 0
+offset_right = 55.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0.860378, 0.737663, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_67cb6")
+text = "asdasfasfasgasg"
+
+[node name="icon" type="Sprite2D" parent="."]
+position = Vector2(50, 50)
+scale = Vector2(0.195313, 0.195313)
+texture = ExtResource("3_spr80")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

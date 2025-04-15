@@ -1,0 +1,173 @@
+[gd_scene load_steps=9 format=3 uid="uid://uemp4evxiu8g"]
+
+[ext_resource type="Script" path="res://scripts/dialog.gd" id="1_r1e7p"]
+[ext_resource type="Texture2D" uid="uid://dhaybm5hyq7t3" path="res://assets/pngs/player.png" id="2_gchnn"]
+[ext_resource type="Texture2D" uid="uid://dgoaghyurtow5" path="res://assets/pngs/UI/textbox.png" id="3_x3bfv"]
+[ext_resource type="Texture2D" uid="uid://co85ikcstvwe1" path="res://assets/pngs/UI/nevtabla.png" id="4_y0wb7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7h16n"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tsogd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_detail = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_dig6u"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_ncd87"]
+font_size = 24
+
+[node name="Dialog" type="CanvasLayer"]
+script = ExtResource("1_r1e7p")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_top = 0.677
+anchor_right = 1.002
+anchor_bottom = 1.0
+offset_top = -438.696
+offset_right = -0.304077
+offset_bottom = 3.0
+
+[node name="Right" type="HSplitContainer" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+split_offset = 296
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Control/Right"]
+layout_mode = 2
+ratio = 10.0
+
+[node name="Caracter" type="Sprite2D" parent="Control/Right/AspectRatioContainer"]
+position = Vector2(154, 486.096)
+scale = Vector2(-0.6, 0.6)
+texture = ExtResource("2_gchnn")
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/Right"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7h16n")
+
+[node name="dialog" type="Panel" parent="Control/Right/PanelContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tsogd")
+metadata/_edit_use_anchors_ = true
+
+[node name="Textbox" type="Sprite2D" parent="Control/Right/PanelContainer/dialog"]
+position = Vector2(546.735, 566.096)
+scale = Vector2(0.676946, 0.647059)
+texture = ExtResource("3_x3bfv")
+
+[node name="Nevtabla" type="Sprite2D" parent="Control/Right/PanelContainer/dialog"]
+texture_filter = 1
+position = Vector2(634, 504.096)
+scale = Vector2(0.868443, 0.904259)
+texture = ExtResource("4_y0wb7")
+
+[node name="Name" type="Label" parent="Control/Right/PanelContainer/dialog"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.075834
+anchor_top = 0.581486
+anchor_right = 0.380997
+anchor_bottom = 0.650048
+offset_right = 2.0
+offset_bottom = 3.0
+text = "István Mester"
+label_settings = SubResource("LabelSettings_dig6u")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Control/Right/PanelContainer/dialog"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 43.0
+offset_top = -223.096
+offset_right = -37.4958
+offset_bottom = -28.0961
+grow_horizontal = 2
+grow_vertical = 0
+text = "Textasgolsmdionhőosdnmhldkfbsdoufhdsjkjierijhksdfjhipsjripjsdklfjhospjropjhsiofsjdkéhjripsjpf"
+label_settings = SubResource("LabelSettings_ncd87")
+autowrap_mode = 3
+
+[node name="Left" type="HSplitContainer" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+split_offset = 1076
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/Left"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7h16n")
+
+[node name="dialog" type="Panel" parent="Control/Left/PanelContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tsogd")
+metadata/_edit_use_anchors_ = true
+
+[node name="Textbox" type="Sprite2D" parent="Control/Left/PanelContainer/dialog"]
+position = Vector2(546.735, 566.096)
+scale = Vector2(0.676946, 0.647059)
+texture = ExtResource("3_x3bfv")
+
+[node name="Nevtabla" type="Sprite2D" parent="Control/Left/PanelContainer/dialog"]
+texture_filter = 1
+position = Vector2(1216, 506.096)
+scale = Vector2(0.868443, 0.904259)
+texture = ExtResource("4_y0wb7")
+
+[node name="Name" type="Label" parent="Control/Left/PanelContainer/dialog"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.615242
+anchor_top = 0.590056
+anchor_right = 0.920405
+anchor_bottom = 0.658618
+offset_right = 2.0
+offset_bottom = 3.0
+text = "István Mester"
+label_settings = SubResource("LabelSettings_dig6u")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Control/Left/PanelContainer/dialog"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 43.0
+offset_top = -223.096
+offset_right = -37.4958
+offset_bottom = -28.0961
+grow_horizontal = 2
+grow_vertical = 0
+text = "Textasgolsmdionhőosdnmhldkfbsdoufhdsjkjierijhksdfjhipsjripjsdklfjhospjropjhsiofsjdkéhjripsjpf"
+label_settings = SubResource("LabelSettings_ncd87")
+autowrap_mode = 3
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Control/Left"]
+layout_mode = 2
+ratio = 10.0
+
+[node name="Caracter" type="Sprite2D" parent="Control/Left/AspectRatioContainer"]
+position = Vector2(154, 486.096)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_gchnn")

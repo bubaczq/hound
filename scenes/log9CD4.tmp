@@ -1,0 +1,345 @@
+[gd_scene load_steps=13 format=3 uid="uid://0vbumh4e7g63"]
+
+[ext_resource type="Script" path="res://scripts/loggin.gd" id="1_1kyft"]
+[ext_resource type="FontFile" uid="uid://tepotnlrvae4" path="res://assets/fonts/Keania_One/KeaniaOne-Regular.ttf" id="2_iy8so"]
+[ext_resource type="StyleBox" uid="uid://dr17sw424nyov" path="res://tres/loggin.tres" id="2_y8o6g"]
+[ext_resource type="StyleBox" uid="uid://dao6fa1bwbyw3" path="res://tres/BTN_hover.tres" id="4_bpt2h"]
+[ext_resource type="Texture2D" uid="uid://dy3xidpvcxhnt" path="res://assets/pngs/Arrow-Outline-Right-icon.png" id="4_dwcn0"]
+[ext_resource type="Texture2D" uid="uid://b8y08un3fu8xp" path="res://assets/pngs/Arrow-Outline-Left-icon.png" id="5_57835"]
+[ext_resource type="StyleBox" uid="uid://bdj6m3l4g5p4s" path="res://tres/BTN_pressed.tres" id="5_o454k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmbbb"]
+bg_color = Color(0.243209, 0.652213, 0.652477, 1)
+border_width_left = 35
+border_width_right = 35
+border_color = Color(0.243137, 0.65098, 0.65098, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mx3de"]
+bg_color = Color(0.321569, 0.780392, 0.780392, 1)
+border_width_top = 35
+border_width_bottom = 35
+border_color = Color(0.321569, 0.780392, 0.780392, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7xat"]
+bg_color = Color(0.321569, 0.780392, 0.780392, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 10
+border_width_bottom = 20
+border_color = Color(0.321569, 0.780392, 0.780392, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_isqlm"]
+bg_color = Color(0.321569, 0.780392, 0.780392, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.321569, 0.780392, 0.780392, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47dck"]
+bg_color = Color(0.321569, 0.780392, 0.780392, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.321569, 0.780392, 0.780392, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[node name="Loggin" type="Node2D"]
+script = ExtResource("1_1kyft")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Lobby" type="MarginContainer" parent="UI/Control/MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 310
+theme_override_constants/margin_top = 350
+theme_override_constants/margin_right = 310
+theme_override_constants/margin_bottom = 250
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/MarginContainer/Lobby"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Login" type="Button" parent="UI/Control/MarginContainer/Lobby/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_kmbbb")
+theme_override_styles/pressed = ExtResource("2_y8o6g")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mx3de")
+
+[node name="Text" type="Label" parent="UI/Control/MarginContainer/Lobby/VBoxContainer/Login"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -18.5
+offset_right = 93.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_fonts/font = ExtResource("2_iy8so")
+theme_override_font_sizes/font_size = 30
+text = "Bejelentkezés"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Registration" type="Button" parent="UI/Control/MarginContainer/Lobby/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_kmbbb")
+theme_override_styles/pressed = ExtResource("2_y8o6g")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mx3de")
+
+[node name="Text" type="Label" parent="UI/Control/MarginContainer/Lobby/VBoxContainer/Registration"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_fonts/font = ExtResource("2_iy8so")
+theme_override_font_sizes/font_size = 30
+text = "Regisztrálció"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="User" type="MarginContainer" parent="UI/Control/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/MarginContainer/User"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Game" type="Button" parent="UI/Control/MarginContainer/User/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_kmbbb")
+theme_override_styles/pressed = ExtResource("2_y8o6g")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mx3de")
+
+[node name="Text" type="Label" parent="UI/Control/MarginContainer/User/VBoxContainer/Game"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -18.5
+offset_right = 93.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iy8so")
+theme_override_font_sizes/font_size = 30
+text = "JÁTÉK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Registration" type="Button" parent="UI/Control/MarginContainer/User/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_kmbbb")
+theme_override_styles/pressed = ExtResource("2_y8o6g")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mx3de")
+
+[node name="Text" type="Label" parent="UI/Control/MarginContainer/User/VBoxContainer/Registration"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iy8so")
+theme_override_font_sizes/font_size = 30
+text = "BEÁLLÍTÁSOK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Achivments" type="Button" parent="UI/Control/MarginContainer/User/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_kmbbb")
+theme_override_styles/pressed = ExtResource("2_y8o6g")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mx3de")
+
+[node name="Text" type="Label" parent="UI/Control/MarginContainer/User/VBoxContainer/Achivments"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iy8so")
+theme_override_font_sizes/font_size = 30
+text = "ACHIVEMENTEK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit" type="Button" parent="UI/Control/MarginContainer/User/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_kmbbb")
+theme_override_styles/pressed = ExtResource("2_y8o6g")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mx3de")
+
+[node name="Text" type="Label" parent="UI/Control/MarginContainer/User/VBoxContainer/Exit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iy8so")
+theme_override_font_sizes/font_size = 30
+text = "KILÉPÉS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Login" type="MarginContainer" parent="UI/Control/MarginContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/MarginContainer/Login"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Errors" type="Label" parent="UI/Control/MarginContainer/Login/VBoxContainer"]
+layout_mode = 2
+
+[node name="Email_text" type="LineEdit" parent="UI/Control/MarginContainer/Login/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_placeholder_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_colors/font_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_fonts/font = ExtResource("2_iy8so")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_r7xat")
+text = "asd@asd.hu"
+placeholder_text = "minta@mail.com"
+
+[node name="Password_text" type="LineEdit" parent="UI/Control/MarginContainer/Login/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_placeholder_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_colors/font_color = Color(0.172549, 0.411765, 0.152941, 1)
+theme_override_fonts/font = ExtResource("2_iy8so")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_r7xat")
+text = "123QWEasd"
+placeholder_text = "*********"
+
+[node name="Login_button" type="Button" parent="UI/Control/MarginContainer/Login"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_styles/hover = ExtResource("4_bpt2h")
+theme_override_styles/pressed = ExtResource("5_o454k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_isqlm")
+icon = ExtResource("4_dwcn0")
+icon_alignment = 1
+
+[node name="BackLogin" type="Button" parent="UI/Control/MarginContainer/Login"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_styles/hover = ExtResource("4_bpt2h")
+theme_override_styles/pressed = ExtResource("5_o454k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_47dck")
+icon = ExtResource("5_57835")
+
+[node name="Achivements" type="MarginContainer" parent="UI/Control/MarginContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 50
+
+[node name="GridContainer" type="GridContainer" parent="UI/Control/MarginContainer/Achivements"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 4
+
+[node name="Back" type="Button" parent="UI/Control/MarginContainer/Achivements"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_styles/hover = ExtResource("4_bpt2h")
+theme_override_styles/pressed = ExtResource("5_o454k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_47dck")
+icon = ExtResource("5_57835")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="UI/Control/MarginContainer/Lobby/VBoxContainer/Login" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="UI/Control/MarginContainer/User/VBoxContainer/Game" to="." method="_on_game_pressed"]
+[connection signal="pressed" from="UI/Control/MarginContainer/User/VBoxContainer/Achivments" to="." method="_on_achivments_pressed"]
+[connection signal="pressed" from="UI/Control/MarginContainer/User/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="UI/Control/MarginContainer/Login/Login_button" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="UI/Control/MarginContainer/Login/BackLogin" to="." method="_on_back_login_pressed"]
+[connection signal="pressed" from="UI/Control/MarginContainer/Achivements/Back" to="." method="_on_back_pressed"]

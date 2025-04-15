@@ -1,0 +1,82 @@
+[gd_scene load_steps=13 format=3 uid="uid://y86yssuqprkw"]
+
+[ext_resource type="Script" path="res://scripts/talkable_npc.gd" id="2_4hqum"]
+[ext_resource type="Texture2D" uid="uid://bk8lc6euibuug" path="res://assets/pngs/hood/i1.png" id="2_ck2yp"]
+[ext_resource type="Texture2D" uid="uid://ipsbv83o1cl" path="res://assets/npcs/1/frame_0_delay-0.1s.png" id="3_0f13v"]
+[ext_resource type="Texture2D" uid="uid://btsc2gb2s8o86" path="res://assets/pngs/hood/i4.png" id="3_tgcnb"]
+[ext_resource type="Texture2D" uid="uid://dhaybm5hyq7t3" path="res://assets/pngs/player.png" id="3_x8qv3"]
+[ext_resource type="Texture2D" uid="uid://prf2buhy50pg" path="res://assets/npcs/1/frame_1_delay-0.1s.png" id="4_cfupq"]
+[ext_resource type="Texture2D" uid="uid://cqvv2uvqlmv07" path="res://assets/pngs/hood/i6.png" id="4_lmftw"]
+[ext_resource type="Texture2D" uid="uid://ivjt1gni4d5d" path="res://assets/pngs/i7.png" id="5_5ghww"]
+[ext_resource type="Texture2D" uid="uid://xfjus0qag2kc" path="res://assets/npcs/1/frame_2_delay-0.1s.png" id="5_h8es2"]
+[ext_resource type="Texture2D" uid="uid://eueqqxmivth6" path="res://assets/npcs/1/frame_3_delay-0.1s.png" id="6_1w726"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ypsj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ck2yp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tgcnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lmftw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5ghww")
+}],
+"loop": false,
+"name": &"cutsceene",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0f13v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cfupq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h8es2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1w726")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdg5j"]
+size = Vector2(821.605, 584.641)
+
+[node name="TalkableNPC" type="Sprite2D"]
+z_index = -1
+script = ExtResource("2_4hqum")
+Kinezet = ExtResource("2_ck2yp")
+NPC_Img = ExtResource("3_x8qv3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-97, -101)
+scale = Vector2(0.277965, 0.277965)
+texture = ExtResource("5_5ghww")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-91, -103)
+scale = Vector2(0.271846, 0.271846)
+sprite_frames = SubResource("SpriteFrames_4ypsj")
+animation = &"cutsceene"
+frame_progress = 0.244902
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(-2, 2.08333)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(148.5, -125.76)
+shape = SubResource("RectangleShape2D_tdg5j")
+debug_color = Color(0.837279, 0.00122368, 0.929279, 0.42)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

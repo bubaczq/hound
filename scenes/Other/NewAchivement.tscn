@@ -1,0 +1,161 @@
+[gd_scene load_steps=11 format=3 uid="uid://x8epbh0ahigr"]
+
+[ext_resource type="Script" path="res://scripts/new_achivement.gd" id="1_j8c43"]
+[ext_resource type="Texture2D" uid="uid://c8t00rrx8p280" path="res://assets/achivements/base/ellenfel_kor.png" id="2_es2wc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w84lt"]
+bg_color = Color(0.613, 0.282, 0.164, 0.59)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.629955, 0.604341, 7.70092e-07, 1)
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="Animation" id="Animation_ofqrj"]
+resource_name = "Achivement_got"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/Control/MarginContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.5001, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(286, -200), Vector2(286, 0), Vector2(286, 0), Vector2(286, 0), Vector2(286, -200)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:lathato")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_55tue"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/Control/MarginContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(286, -200)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:lathato")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x083q"]
+_data = {
+"Achivement_got": SubResource("Animation_ofqrj"),
+"RESET": SubResource("Animation_55tue")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5ct4h"]
+animation = &"Achivement_got"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eljui"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5kn4n"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_dbvrb"]
+states/Achivement_got/node = SubResource("AnimationNodeAnimation_5ct4h")
+states/Achivement_got/position = Vector2(524, 100)
+transitions = ["Start", "Achivement_got", SubResource("AnimationNodeStateMachineTransition_eljui"), "Achivement_got", "End", SubResource("AnimationNodeStateMachineTransition_5kn4n")]
+
+[node name="NewAchivement" type="Node2D"]
+script = ExtResource("1_j8c43")
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="Control" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.204
+anchor_right = 0.77
+anchor_bottom = 0.141
+offset_left = 0.399994
+offset_top = -200.0
+offset_bottom = -199.8
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Achivement" type="Panel" parent="UI/Control/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w84lt")
+
+[node name="Achivement_name" type="Label" parent="UI/Control/MarginContainer/Achivement"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = -531.0
+offset_bottom = -66.0
+theme_override_font_sizes/font_size = 30
+text = "Achivement neve"
+
+[node name="Text" type="Label" parent="UI/Control/MarginContainer/Achivement"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = 53.0
+offset_right = -19.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Valaminagyon hoszú szöveg arról hogy mit kellet elérni az achivement-hez"
+autowrap_mode = 3
+
+[node name="icon" type="Sprite2D" parent="UI/Control/MarginContainer/Achivement"]
+position = Vector2(731, 58)
+scale = Vector2(0.150391, 0.150391)
+texture = ExtResource("2_es2wc")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_x083q")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_dbvrb")
+anim_player = NodePath("../AnimationPlayer")

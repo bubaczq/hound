@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch0cujwqxcgoq"]
+
+[ext_resource type="Script" path="res://scripts/spawner.gd" id="1_h31p8"]
+[ext_resource type="PackedScene" uid="uid://6mlovd5ity2r" path="res://scenes/Other/explosion.tscn" id="2_y6vhb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_10ilf"]
+radius = 2495.45
+
+[node name="spawner" type="Node2D"]
+position = Vector2(555, 303)
+script = ExtResource("1_h31p8")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="explosion" parent="." instance=ExtResource("2_y6vhb")]
+
+[node name="CPUParticles2D" parent="explosion" index="0"]
+position = Vector2(0, 6)
+amount = 70
+lifetime = 1.0
+gravity = Vector2(0, 300)
+initial_velocity_min = 300.0
+initial_velocity_max = 600.0
+scale_amount_min = 10.0
+scale_amount_max = 20.0
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_10ilf")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+
+[editable path="explosion"]
