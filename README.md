@@ -1,5 +1,19 @@
 # A Játék elérési útja: https://drive.google.com/file/d/1VL7TZYSGmKLJMLnieDQHcH3JY0LS2Z6t/view?usp=drive_link
 # Assetek elérhetőek innen: https://drive.google.com/drive/folders/1UcTV6qOxPjwW5SJyaYRz0vBs6nU3VCsm?usp=drive_link
+---
+# A Játék fejlesztése
+
+-pullolja le a gitről a jelen lévő asseteket
+
+-rakja hozzá a fileba a fönt látható drive linken elérhető asset mappát
+
+-töltse le a godot engine-t
+
+-nyissa meg majd az import fülön töltse be a mappában található project.godot file-t
+
+-majd fejlesztheti is a játékot
+
+---
 # 🎮 Játék Menete
 
 ## 1. **Főmenü**
