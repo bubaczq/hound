@@ -1,4 +1,4 @@
-# A Játék (version 1.3): https://drive.google.com/file/d/1CVx8Y0V21r6QfF2EA6_blZOSDOVBOHH9/view?usp=drive_link
+# A Játék (version 1.3): https://drive.google.com/file/d/1nzKiTnbof8nN4Ze2nJPGvU0CdUyePpqT/view?usp=drive_link
 # Assetek elérhetőek innen: https://drive.google.com/drive/folders/1UcTV6qOxPjwW5SJyaYRz0vBs6nU3VCsm?usp=drive_link
 ---
 # A Játék fejlesztése
