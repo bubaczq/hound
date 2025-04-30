@@ -19,6 +19,7 @@ extends Sprite2D
 
 #Szükséges változók
 var playerin=false
+var played=false
 
 func _ready() -> void:
 	if Kinezet==null:
@@ -41,7 +42,8 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	GameManeger.message=message
 	playerin=true
-	if Npc_img.texture.resource_path=="res://assets/pngs/hood/i1.png":
+	if Npc_img.texture.resource_path=="res://assets/pngs/hood/i1.png" and !played:
+		played=true
 		Npc_img.visible=false 
 		Npc_look.visible=true
 		Npc_look.play("cutsceene")

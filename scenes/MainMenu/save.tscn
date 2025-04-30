@@ -124,7 +124,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_hlg0j")
 theme_override_styles/hover = ExtResource("5_d6c11")
 theme_override_styles/pressed = ExtResource("6_uc560")
 theme_override_styles/normal = ExtResource("7_ca3ji")
-text = "Create New Game"
+text = "Új játék"
 
 [connection signal="pressed" from="Have/Delete" to="." method="_on_delete_pressed"]
 [connection signal="pressed" from="Have/Start" to="." method="_on_start_pressed"]

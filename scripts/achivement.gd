@@ -32,7 +32,7 @@ func _process(delta):
 		update_tooltip_position()
 
 func update_tooltip_position():
-	tooltip_label.position = get_local_mouse_position() + Vector2(100, 100)
+	tooltip_label.position = get_local_mouse_position() + Vector2(55, 85)
 
 func update_tooltip_text():
 	tooltip_label.text = cim.to_upper() + "\n\n\t" + szoveg

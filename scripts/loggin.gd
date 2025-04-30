@@ -19,7 +19,7 @@ extends Node2D
 @onready var DieCounts=$UI/Control/Options/Panel/Stats/DieCounts
 
 #Egyébb kiírások
-@onready var achivement_message=$UI/Control/Achivements/Message
+@onready var achivement_message=$UI/Control/Achivements/Panel/Message
 @onready var Error=$UI/Control/Login/VBoxContainer/Errors
 @onready var achivements_label=preload("res://scenes/MainMenu/achivement.tscn")
 @onready var achivements_grid=$UI/Control/Achivements/GridContainer

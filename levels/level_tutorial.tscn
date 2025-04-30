@@ -867,7 +867,8 @@ szovegek = ["1:Istvanmester:István Mester:Siess ne váratasd meg őket!"]
 position = Vector2(5537, 5172)
 
 [node name="Teleport" parent="Items" instance=ExtResource("15_c7h4t")]
-position = Vector2(52546, 1466)
+position = Vector2(52569, 1632)
+scale = Vector2(1.433, 1.652)
 teleport_location = "0"
 NewBestLevel = 1
 
@@ -877,10 +878,10 @@ position = Vector2(-5801, 1563.4)
 
 [node name="AreaDialog" parent="Items" instance=ExtResource("15_r4hbe")]
 position = Vector2(-2848.09, 1394)
-Szovegek = ["1:Istvanmester:István Mester:Szia Balwin!", "1:Istvanmester:István Mester:Egy szomorú hírt kell közöljek veled!", "1:Istvanmester:István Mester:A falud ostrom alatt áll!", "1:Istvanmester:István Mester:Siess segitts nekik még nem késő!", "1:Istvanmester:István Mester:Tessék itt egy talizmán amivel távólról is tudunk majd komunikálni jól őrizd meg!", "0::ÚJ tárgy megszerezve!:Megszerezted \"Talizmán\" Ezzel távolról is tudnak komunikálni veled!"]
+Szovegek = ["1:Istvanmester:István Mester:Szia Baldwin!", "1:Istvanmester:István Mester:Egy szomorú hírt kell közölnöm veled!", "1:Istvanmester:István Mester:A falud ostrom alatt áll!", "1:Istvanmester:István Mester:Siess, segíts nekik, még nem késő!", "1:Istvanmester:István Mester:Tessék, itt egy talizmán, amivel távolról is tudunk majd kommunikálni – jól őrizd meg!", "0::ÚJ tárgy megszerezve!:Megszerezted \"Talizmán\" Ezzel távolról is tudnak komunikálni veled!"]
 
 [node name="Wasd" type="Sprite2D" parent="Items"]
-position = Vector2(-4693, 72)
+position = Vector2(-4490, 59)
 texture = ExtResource("16_ka8ny")
 
 [node name="E" type="Sprite2D" parent="Items"]
@@ -896,7 +897,7 @@ position = Vector2(2767, 777)
 texture = ExtResource("19_4sbtj")
 
 [node name="Shift" type="Sprite2D" parent="Items"]
-position = Vector2(23492, -4)
+position = Vector2(-5563, 299)
 texture = ExtResource("20_jgccd")
 
 [node name="V" type="Sprite2D" parent="Items"]

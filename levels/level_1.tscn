@@ -856,6 +856,7 @@ camera = NodePath("../../Camera")
 player = NodePath("../../Player")
 whatToSee = NodePath("../../Ismerias")
 others = [NodePath("../../enemy2")]
+Szovegek = ["1:ismeriasjav:Ismeretlen:Nincs menekvés senki számára!"]
 
 [node name="Enemy" parent="Items" instance=ExtResource("11_727vt")]
 position = Vector2(5028, 3438)

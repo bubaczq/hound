@@ -49,6 +49,7 @@ size = Vector2(193, 186)
 sprite_frames = SubResource("SpriteFrames_lxtde")
 frame_progress = 0.0763351
 script = ExtResource("2_ur8uy")
+teleport_location = "level_boss"
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 2
