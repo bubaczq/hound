@@ -1,4 +1,4 @@
-# A Játék elérési útja: https://drive.google.com/file/d/1VL7TZYSGmKLJMLnieDQHcH3JY0LS2Z6t/view?usp=drive_link
+# A Játék legujjabb verziója 1.3: https://drive.google.com/file/d/1fC6ZwLNE8DusVtnnAjggBdiz0Jtb1rp-/view?usp=drive_link
 # Assetek elérhetőek innen: https://drive.google.com/drive/folders/1UcTV6qOxPjwW5SJyaYRz0vBs6nU3VCsm?usp=drive_link
 ---
 # A Játék fejlesztése
